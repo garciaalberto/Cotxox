@@ -1,3 +1,3 @@
 # Cotxox
 
-Cotxox APp
+Cotxox App
