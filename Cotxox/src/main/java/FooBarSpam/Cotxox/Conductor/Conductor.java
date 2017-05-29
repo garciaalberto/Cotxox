@@ -1,86 +1,147 @@
 package FooBarSpam.Cotxox.Conductor;
 
 import java.util.ArrayList;
+import javax.persistence.*;
 
+@Entity
+@Table
 public class Conductor {
-	// Propiedades privadas
-	private String nombre = null;
-	private String matricula = null;
-	private String modelo = null;
-	private ArrayList<Byte> valoraciones = new ArrayList<Byte>();
-	private boolean ocupado = false;
-	private double valoracionMedia = 0d;
-	
-	// Constructores
-	public Conductor() {
-		
-	}
-	
-	public Conductor(String nombre) {
-		this.nombre = nombre;
-	}
+    // Propiedades privadas
 
-	// Setters y Getters
-	public String getNombre() {
-		return this.nombre;
-	}
+    @Id
+    @Column
+    private String id = null;
+    @Column
+    private String nombre = null;
+    @Column
+    private String matricula = null;
+    @Column
+    private String modelo = null;
+    private ArrayList<Byte> valoraciones = new ArrayList<Byte>();
+    @Column
+    private boolean ocupado = false;
+    @Column
+    private double valoracionMedia = 0d;
 
-	public String getMatricula() {
-		return this.matricula;
-	}
+    // Constructores
+    public Conductor() {
 
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
+    }
 
-	public String getModelo() {
-		return this.modelo;
-	}
+    public Conductor(String id) {
+        this.id = id;
+    }
 
-	public void setModelo(String modelo) {
-		this.modelo = modelo;
-	}
+    // Metodos
+    public void actualizarMedia() {
 
-	public void setValoracion(Byte valoracion) {
-		this.valoraciones.add(valoracion);
-		this.actualizarMedia();
-	}
+        double suma = 0.0;
 
-	public ArrayList<Byte> getValoraciones() {
-		return this.valoraciones;
-	}
+        for (Byte valoracion : this.getValoraciones()) {
+            suma += valoracion;
+        }
 
-	public boolean isOcupado() {
-		return ocupado;
-	}
+        double media = suma / this.getValoraciones().size();
+        this.setValoracionMedia(media);
+    }
 
-	public void setOcupado(boolean ocupado) {
-		this.ocupado = ocupado;
-	}
-	
-	public void actualizarMedia() {
+    // Setters y Getters
+    /**
+     * @return the id
+     */
+    public String getId() {
+        return id;
+    }
 
-		double suma = 0.0;
+    /**
+     * @param id the id to set
+     */
+    public void setId(String id) {
+        this.id = id;
+    }
 
-		for (Byte valoracion : this.getValoraciones()) {
-			suma += valoracion;
-		}
-		
-		double media = suma / this.getValoraciones().size();
-		this.setValoracionMedia(media);
-	}
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
 
-	public double getValoracionMedia() {
-		return valoracionMedia;
-	}
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-	public void setValoracionMedia(double valoracionMedia) {
-		this.valoracionMedia = valoracionMedia;
-	}
-	
-	public double getValoracion() {
-		return this.valoracionMedia;
-	}
-	
-	
+    /**
+     * @return the matricula
+     */
+    public String getMatricula() {
+        return matricula;
+    }
+
+    /**
+     * @param matricula the matricula to set
+     */
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    /**
+     * @return the modelo
+     */
+    public String getModelo() {
+        return modelo;
+    }
+
+    /**
+     * @param modelo the modelo to set
+     */
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    /**
+     * @return the valoraciones
+     */
+    public ArrayList<Byte> getValoraciones() {
+        return valoraciones;
+    }
+
+    /**
+     * @param valoraciones the valoraciones to set
+     */
+    public void setValoraciones(ArrayList<Byte> valoraciones) {
+        this.valoraciones = valoraciones;
+    }
+
+    /**
+     * @return the ocupado
+     */
+    public boolean isOcupado() {
+        return ocupado;
+    }
+
+    /**
+     * @param ocupado the ocupado to set
+     */
+    public void setOcupado(boolean ocupado) {
+        this.ocupado = ocupado;
+    }
+
+    /**
+     * @return the valoracionMedia
+     */
+    public double getValoracionMedia() {
+        return valoracionMedia;
+    }
+
+    /**
+     * @param valoracionMedia the valoracionMedia to set
+     */
+    public void setValoracionMedia(double valoracionMedia) {
+        this.valoracionMedia = valoracionMedia;
+    }
+
 }
