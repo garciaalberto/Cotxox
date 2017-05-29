@@ -1,38 +1,19 @@
 package FooBarSpam.Cotxox.Carrera;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
 import FooBarSpam.Cotxox.Conductor.Conductor;
 import FooBarSpam.Cotxox.Conductor.PoolConductores;
 import FooBarSpam.Cotxox.Tarifa.Tarifa;
 
-@Entity
-@Table
 public class Carrera {
 	// Propiedades privadas
-	@Id
-    @Column
-	private String id = null;
-	@Column
 	private String tarjetaCredito = null;
-	@Column
 	private String origen = null;
-	@Column
 	private String destino = null;
-	@Column
 	private double distancia = 0d;
-	@Column
 	private int tiempoEsperadoMinutos = 0;
-	@Column
-	private int tiempoCarrera = 0;
-	@Column
+	//private int tiempoCarrera = 0;
 	private double costeTotal = 0d;
-	@Column
 	private Conductor conductor = null;
-	@Column
 	private double propina = 0d;
 	
 	// Constructores
