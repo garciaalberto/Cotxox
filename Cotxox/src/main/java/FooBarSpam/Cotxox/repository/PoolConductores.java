@@ -3,7 +3,7 @@ package FooBarSpam.Cotxox.repository;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class PoolConductores {
+public class PoolConductores implements PoolConductoresRepository {
 	private ArrayList<Conductor> conductores = null;
 	
 	public PoolConductores(){

@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table
-public class Conductor {
+public class Conductor implements ConductorRepository {
     // Propiedades privadas
 
     @Id
