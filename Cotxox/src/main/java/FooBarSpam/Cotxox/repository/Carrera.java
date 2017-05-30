@@ -1,13 +1,13 @@
-package FooBarSpam.Cotxox.Carrera;
+package FooBarSpam.Cotxox.repository;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import FooBarSpam.Cotxox.Conductor.Conductor;
-import FooBarSpam.Cotxox.Conductor.PoolConductores;
-import FooBarSpam.Cotxox.Tarifa.Tarifa;
+import FooBarSpam.Cotxox.repository.Conductor;
+import FooBarSpam.Cotxox.repository.PoolConductores;
+import FooBarSpam.Cotxox.mvc.Tarifa;
 
 @Entity
 @Table

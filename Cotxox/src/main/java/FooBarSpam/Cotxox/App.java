@@ -2,9 +2,9 @@ package FooBarSpam.Cotxox;
 
 import java.util.ArrayList;
 
-import FooBarSpam.Cotxox.Carrera.Carrera;
-import FooBarSpam.Cotxox.Conductor.Conductor;
-import FooBarSpam.Cotxox.Conductor.PoolConductores;
+import FooBarSpam.Cotxox.repository.Carrera;
+import FooBarSpam.Cotxox.repository.Conductor;
+import FooBarSpam.Cotxox.repository.PoolConductores;
 
 public class App {
 

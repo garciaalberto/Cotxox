@@ -1,6 +1,6 @@
-package FooBarSpam.Cotxox.Tarifa;
+package FooBarSpam.Cotxox.mvc;
 
-import FooBarSpam.Cotxox.Carrera.Carrera;
+import FooBarSpam.Cotxox.repository.Carrera;
 
 public class Tarifa {
 	// Propiedades privadas

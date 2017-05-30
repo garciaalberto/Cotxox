@@ -1,4 +1,4 @@
-package FooBarSpam.Cotxox.Conductor;
+package FooBarSpam.Cotxox.repository;
 
 import java.util.ArrayList;
 import javax.persistence.*;
