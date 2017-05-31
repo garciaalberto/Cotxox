@@ -5,10 +5,35 @@
  */
 package FooBarSpam.Cotxox.mvc;
 
+import FooBarSpam.Cotxox.repository.Carrera;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 /**
  *
  * @author Sergi
  */
+@RestController
 public class CarreraServiceController {
-    
+
+    /*
+    System.out.println("\n#####" + "\t Set Pickup: \t" + "#####\n" );
+		
+		System.out.println("Visa: " + carrera.getTarjetaCredito());
+		System.out.println("From: "+ carrera.getOrigen());
+		System.out.println("To: " + carrera.getDestino());
+		System.out.println("Distance: " + carrera.getDistancia());
+     */
+    @RequestMapping("/setpickup")
+    public String setPickUp(Carrera carrera) {
+
+        String sms = "\\n#####\" + \"\\t Set Pickup: \\t\" + \"#####\\n";
+        sms.concat("\nVisa: " + carrera.getTarjetaCredito());
+        sms.concat("\nFrom: " + carrera.getOrigen());
+        sms.concat("\nTo:" + carrera.getDestino());
+        sms.concat("\nDistance:" + carrera.getDistancia());
+
+        return "s";
+    }
+
 }
