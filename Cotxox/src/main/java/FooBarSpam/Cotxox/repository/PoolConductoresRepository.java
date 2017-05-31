@@ -5,10 +5,12 @@
  */
 package FooBarSpam.Cotxox.repository;
 
+import org.springframework.data.repository.CrudRepository;
+
 /**
  *
  * @author Sergi
  */
-public interface PoolConductoresRepository {
+public interface PoolConductoresRepository extends CrudRepository<PoolConductores, Integer> {
     
 }
