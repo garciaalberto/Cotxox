@@ -6,6 +6,7 @@
 package FooBarSpam.Cotxox.mvc;
 
 import FooBarSpam.Cotxox.repository.Carrera;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author Sergi
  */
-@RestController
+@Controller
 public class CarreraServiceController {
 
     /*
