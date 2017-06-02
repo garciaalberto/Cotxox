@@ -18,6 +18,6 @@ public class CarreraServiceController {
     @RequestMapping(path="/SetPickup")
     @ResponseBody
     public String setPickUp() {
-    	return "SetPickup";
+    	return "setpickup";
     }
 }
