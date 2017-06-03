@@ -5,6 +5,7 @@
  */
 package org.foobarspam.mvc;
 
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import org.foobarspam.repository.Conductor;
 import org.springframework.stereotype.Controller;
@@ -18,7 +19,9 @@ import org.springframework.ui.Model;
  * @author Sergi
  */
 @Controller
+
 public class CarreraServiceController {
+
 
     @RequestMapping(path = "/SetPickup")
     @ResponseBody
@@ -40,11 +43,10 @@ public class CarreraServiceController {
 //        return "Uep, " + nom;
 //
 //    }
-
     // amb template
-    @RequestMapping("/")
+    @RequestMapping("/index")
     public String mostrarConductor(Model model, Conductor conductor) {
-        
+
         model.addAttribute("id", conductor.getId());
         model.addAttribute("nombre", conductor.getNombre());
         model.addAttribute("matricula", conductor.getMatricula());

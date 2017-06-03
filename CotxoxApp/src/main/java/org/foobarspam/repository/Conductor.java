@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table
-public class Conductor{
+public class Conductor {
     // Propiedades privadas
 
     @Id
@@ -30,6 +30,16 @@ public class Conductor{
 
     public Conductor(String id) {
         this.id = id;
+    }
+
+    public Conductor(String id, String nombre, String matricula, String modelo, boolean ocupado, double valoracionMedia) {
+        this.id = id;
+        this.nombre = nombre;
+        this.matricula = matricula;
+        this.modelo = modelo;
+        this.ocupado = ocupado;
+        this.valoracionMedia = valoracionMedia;
+
     }
 
     // Metodos
@@ -120,9 +130,9 @@ public class Conductor{
      * @return the ocupado
      */
     public String estaOcupado() {
-        if (this.ocupado){
+        if (this.ocupado) {
             return "Ocupado";
-        }else{
+        } else {
             return "Libre";
         }
     }
@@ -130,8 +140,6 @@ public class Conductor{
     public boolean isOcupado() {
         return ocupado;
     }
-    
-    
 
     /**
      * @param ocupado the ocupado to set
@@ -153,6 +161,5 @@ public class Conductor{
     public void setValoracionMedia(double valoracionMedia) {
         this.valoracionMedia = valoracionMedia;
     }
-    
 
 }
