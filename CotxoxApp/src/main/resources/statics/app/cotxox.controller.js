@@ -3,47 +3,46 @@
  */
 (function () {
     'use strict';
-
     angular
-        .module('app')
-        .controller('BookingsController', BookingsController);
+            .module('app')
+            .controller('ConductorsController', ConductorsController);
+ 
+    ConductorsController.$inject = ['$http'];
 
-    BookingsController.$inject = ['$http'];
-
-    function BookingsController($http) {
+    function ConductorsController($http) {
         var vm = this;
 
-        vm.bookings = [];
+        vm.poolConductores = [];
         vm.getAll = getAll;
-        vm.getAffordable = getAffordable;
-        vm.deleteBooking = deleteBooking;
+        vm.getFiables = getFiables;
+        vm.eliminarConductor = eliminarConductor;
 
         init();
 
-        function init(){
+        function init() {
             getAll();
         }
 
-        function getAll(){
-            var url = "/bookings/all";
-            var bookingsPromise = $http.get(url);
-            bookingsPromise.then(function(response){
-                vm.bookings = response.data;
+        function getAll() {
+            var url = "/poolConductores/all";
+            var poolConductoresAll = $http.get(url);
+            poolConductoresAll.then(function (response) {
+                vm.poolConductores = response.data;
             });
         }
 
-        function getAffordable(){
-            var url = "/bookings/affordable/" + 100;
-            var bookingsPromise = $http.get(url);
-            bookingsPromise.then(function(response){
-                vm.bookings = response.data;
+        function getFiables() {
+            var url = "/poolConductores/Fiables/" + 100;
+            var poolConductoresFialbes = $http.get(url);
+            poolConductoresFialbes.then(function (response) {
+                vm.poolConductores = response.data;
             });
         }
 
-        function deleteBooking(id){
-            var url = "/bookings/delete/" + id;
-            $http.post(url).then(function(response){
-                vm.bookings = response.data;
+        function eliminarConductor(id) {
+            var url = "/poolConductores/eliminar/" + id;
+            $http.post(url).then(function (response) {
+                vm.poolConductores = response.data;
             });
         }
     }
