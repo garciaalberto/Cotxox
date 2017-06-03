@@ -4,9 +4,9 @@
         <!-- Required meta tags -->
         <meta charset="utf-8"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
-    <script type="text/javascript" src="../statics/angular.min.js" th:src="@{/angular.min.js}"></script>
-    <script type="text/javascript" src="../statics/app/app.module.js" th:src="@{/app/app.module.js}"></script>
-    <script type="text/javascript" src="../statics/app/cotxox.controller.js" th:src="@{/app/cotxox.controller.js}"></script>
+        <script type="text/javascript" src="../statics/angular.min.js" th:src="@{/angular.min.js}"></script>
+        <script type="text/javascript" src="../statics/app/app.module.js" th:src="@{/app/app.module.js}"></script>
+        <script type="text/javascript" src="../statics/app/cotxox.controller.js" th:src="@{/app/cotxox.controller.js}"></script>
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"></link>
@@ -44,7 +44,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="conductor in vm.ConductorController">
+                            <tr ng-repeat="conductor in vm.Conductors">
                                 <td>{{conductor.nombre}}</td>
                                 <td>{{conductor.modelo}}</td>
                                 <td>{{conductor.matricula}}</td>
@@ -65,5 +65,5 @@
                 <p th:text="${#dates.format(datetime, 'dd MMM yyyy HH:mm')}"  class="text-muted">Page was rendered today.</p>
             </div>
         </footer>
-  </body>
+    </body>
 </html>
