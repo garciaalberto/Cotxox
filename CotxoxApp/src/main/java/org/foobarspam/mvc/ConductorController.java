@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import org.foobarspam.repository.Conductor;
+import org.jsondoc.core.annotation.ApiMethod;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -54,5 +56,8 @@ public class ConductorController {
     public List<Conductor> getDisponibles(@PathVariable boolean ocupado) {
         return this.poolConductores.stream().filter(x -> x.isOcupado() == ocupado).collect(Collectors.toList());
     }
+    
+    //Crear
+    
 
 }
