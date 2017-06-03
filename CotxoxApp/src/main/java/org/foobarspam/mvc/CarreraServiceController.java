@@ -29,20 +29,6 @@ public class CarreraServiceController {
         return "setpickup";
     }
 
-    // sense template
-//    @RequestMapping(value = "/Bones", method = RequestMethod.GET)
-//    @ResponseBody
-//    public String bones(HttpServletRequest request, Model model) {
-//
-//        String nom = request.getParameter("nom");
-//
-//        if (nom.isEmpty()) {
-//            nom = "merda";
-//        }
-//        model.addAttribute("missatge", nom);
-//        return "Uep, " + nom;
-//
-//    }
     // amb template
     @RequestMapping("/index")
     public String mostrarConductor(Model model, Conductor conductor) {

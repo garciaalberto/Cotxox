@@ -9,8 +9,9 @@ public class Conductor {
     // Propiedades privadas
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column
-    private String id = null;
+    private Long id = null;
     @Column
     private String nombre = null;
     @Column
@@ -19,7 +20,7 @@ public class Conductor {
     private String modelo = null;
     private ArrayList<Byte> valoraciones = new ArrayList<Byte>();
     @Column
-    private boolean ocupado = false;
+    private Boolean ocupado = false;
     @Column
     private double valoracionMedia = 0d;
 
@@ -28,12 +29,9 @@ public class Conductor {
 
     }
 
-    public Conductor(String id) {
-        this.id = id;
-    }
 
-    public Conductor(String id, String nombre, String matricula, String modelo, boolean ocupado, double valoracionMedia) {
-        this.id = id;
+    public Conductor(String nombre, String matricula, String modelo, Boolean ocupado, double valoracionMedia) {
+
         this.nombre = nombre;
         this.matricula = matricula;
         this.modelo = modelo;
@@ -59,14 +57,14 @@ public class Conductor {
     /**
      * @return the id
      */
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -137,14 +135,14 @@ public class Conductor {
         }
     }
 
-    public boolean isOcupado() {
+    public Boolean isOcupado() {
         return ocupado;
     }
 
     /**
      * @param ocupado the ocupado to set
      */
-    public void setOcupado(boolean ocupado) {
+    public void setOcupado(Boolean ocupado) {
         this.ocupado = ocupado;
     }
 
@@ -161,5 +159,7 @@ public class Conductor {
     public void setValoracionMedia(double valoracionMedia) {
         this.valoracionMedia = valoracionMedia;
     }
+    
+    
 
 }

@@ -5,12 +5,10 @@
  */
 package org.foobarspam.mvc;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 import org.foobarspam.repository.Conductor;
-import org.jsondoc.core.annotation.ApiMethod;
+import org.foobarspam.repository.ConductorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,39 +23,59 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/poolConductores")
 public class ConductorController {
 
-    private List<Conductor> poolConductores;
-
-    public ConductorController() {
-        poolConductores = new ArrayList<>();
-
-        poolConductores.add(new Conductor("001", "Rick Sánchez", "CBV 4005", "Seat Panda", false, 5.4));
-        poolConductores.add(new Conductor("002", "Mortimer Smith", "JGB 4475", "Peugeot 307 HDI", false, 7.8));
-        poolConductores.add(new Conductor("003", "Leia Organa", "FHD 6416", "Toyota Corolla", true, 6.7));
-        poolConductores.add(new Conductor("004", "Hann Solo", "FBK 7645", "Ford Europa", false, 8.9));
-        poolConductores.add(new Conductor("005", "Hernando Alphonse", "JSD 4567", "Honda McLaren", false, 0.5));
-
+    private ConductorRepository conductorRepository;
+    
+    
+    @Autowired
+    public ConductorController(ConductorRepository conductorRepository) {
+       this.conductorRepository = conductorRepository;
     }
 
     //Todos Conductores
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<Conductor> getAll() {
-        return this.poolConductores;
+        return this.conductorRepository.findAll();
     }
 
     //Conductores con la valoracion indicada
     @RequestMapping(value = "/fiables/{valoracionMedia}", method = RequestMethod.GET)
     public List<Conductor> getFiables(@PathVariable double valoracionMedia) {
-        return this.poolConductores.stream().filter(x -> x.getValoracionMedia()
-                <= valoracionMedia).collect(Collectors.toList());
+        return this.conductorRepository.findByValoracionMediaLessThan(valoracionMedia);
+        
     }
+      
+    /*
+    @RequestMapping(value = "/disponibles/{ocupado}", method = RequestMethod.GET) 
+    public List<Conductor> getDisponibles(@PathVariable boolean ocupado) { 
+        return this.poolConductores.stream().filter(x -> x.isOcupado() == ocupado).collect(Collectors.toList()); 
+    } 
+    */
 
     //Conductores disponibles o ocupados
     @RequestMapping(value = "/disponibles/{ocupado}", method = RequestMethod.GET)
-    public List<Conductor> getDisponibles(@PathVariable boolean ocupado) {
-        return this.poolConductores.stream().filter(x -> x.isOcupado() == ocupado).collect(Collectors.toList());
+    public List<Conductor> getDisponibles(@PathVariable Boolean ocupado) {
+   
+        return this.conductorRepository.findByOcupadoTrue(ocupado);
+    
     }
     
     //Crear
+    @RequestMapping(value = "/crear", method = RequestMethod.POST)
+    public List<Conductor> crearConductor(@RequestBody Conductor conductor) {
+   
+        conductorRepository.save(conductor);
+        return this.conductorRepository.findAll();
     
-
+    }
+    
+     //Eliminar
+    @RequestMapping(value = "/eliminar/{id}", method = RequestMethod.GET)
+    public List<Conductor> eliminarConductor(@RequestBody Long id) {
+   
+        conductorRepository.delete(id);
+        return this.conductorRepository.findAll();
+    
+    }
+  
+    
 }
