@@ -119,9 +119,19 @@ public class Conductor{
     /**
      * @return the ocupado
      */
+    public String estaOcupado() {
+        if (this.ocupado){
+            return "Ocupado";
+        }else{
+            return "Libre";
+        }
+    }
+
     public boolean isOcupado() {
         return ocupado;
     }
+    
+    
 
     /**
      * @param ocupado the ocupado to set

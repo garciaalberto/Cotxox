@@ -6,6 +6,7 @@
 package org.foobarspam.mvc;
 
 import javax.servlet.http.HttpServletRequest;
+import org.foobarspam.repository.Conductor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,7 +19,6 @@ import org.springframework.ui.Model;
  */
 @Controller
 public class CarreraServiceController {
-    
 
     @RequestMapping(path = "/SetPickup")
     @ResponseBody
@@ -26,17 +26,50 @@ public class CarreraServiceController {
         return "setpickup";
     }
 
-    @RequestMapping(value = "/Bones", method = RequestMethod.GET)
-    @ResponseBody
-    public String bones(HttpServletRequest request, Model model) {
+    // sense template
+//    @RequestMapping(value = "/Bones", method = RequestMethod.GET)
+//    @ResponseBody
+//    public String bones(HttpServletRequest request, Model model) {
+//
+//        String nom = request.getParameter("nom");
+//
+//        if (nom.isEmpty()) {
+//            nom = "merda";
+//        }
+//        model.addAttribute("missatge", nom);
+//        return "Uep, " + nom;
+//
+//    }
 
-        String nom = request.getParameter("nom");
+    // amb template
+    
+    /*
+       @Id
+    @Column
+    private String id = null;
+    @Column
+    private String nombre = null;
+    @Column
+    private String matricula = null;
+    @Column
+    private String modelo = null;
+    private ArrayList<Byte> valoraciones = new ArrayList<Byte>();
+    @Column
+    private boolean ocupado = false;
+    @Column
+    private double valoracionMedia = 0d;
 
-        if (nom.isEmpty()) {
-            nom = "merda";
-        }
-        model.addAttribute("name", nom);
-        return "Uep, " + nom;
+    */
+    @RequestMapping("/")
+    public String mostrarConductor(Model model, Conductor conductor) {
+        
+        model.addAttribute("id", conductor.getId());
+        model.addAttribute("nombre", conductor.getNombre());
+        model.addAttribute("matricula", conductor.getMatricula());
+        model.addAttribute("ocupado", conductor.estaOcupado());
+        model.addAttribute("valoracion", String.valueOf(conductor.getValoracionMedia()));
 
+        return "index";
     }
+
 }
