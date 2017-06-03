@@ -42,24 +42,6 @@ public class CarreraServiceController {
 //    }
 
     // amb template
-    
-    /*
-       @Id
-    @Column
-    private String id = null;
-    @Column
-    private String nombre = null;
-    @Column
-    private String matricula = null;
-    @Column
-    private String modelo = null;
-    private ArrayList<Byte> valoraciones = new ArrayList<Byte>();
-    @Column
-    private boolean ocupado = false;
-    @Column
-    private double valoracionMedia = 0d;
-
-    */
     @RequestMapping("/")
     public String mostrarConductor(Model model, Conductor conductor) {
         
