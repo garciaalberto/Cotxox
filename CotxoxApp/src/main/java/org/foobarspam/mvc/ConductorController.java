@@ -8,6 +8,8 @@ package org.foobarspam.mvc;
 import java.util.List;
 import org.foobarspam.repository.Conductor;
 import org.foobarspam.repository.ConductorRepository;
+import org.jsondoc.core.annotation.Api;
+import org.jsondoc.core.pojo.ApiStage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,6 +23,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/poolConductores")
+@Api(
+        name = "Cotxox API",
+        description = "Lista de metodos para manejar cotxox",
+        stage = ApiStage.RC)
 public class ConductorController {
 
     private ConductorRepository conductorRepository;
@@ -69,7 +75,7 @@ public class ConductorController {
     }
     
      //Eliminar
-    @RequestMapping(value = "/eliminar/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/eliminar/{id}", method = RequestMethod.POST)
     public List<Conductor> eliminarConductor(@RequestBody Long id) {
    
         conductorRepository.delete(id);
