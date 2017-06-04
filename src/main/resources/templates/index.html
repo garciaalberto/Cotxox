@@ -3,9 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <title>Cotxox App</title>
-        <link th:if="${mode == 'development'}" rel="stylesheet" href="../static/bootstrap.css" th:href="@{/bootstrap.css}" />
-        <link th:if="${mode == 'production'}" rel="stylesheet" href="../static/bootstrap.min.css" th:href="@{/bootstrap.min.css}" />
-        <script type="text/javascript" src="../static/angular.min.js" th:src="@{/angular.min.js}"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"></link>        <script type="text/javascript" src="../static/angular.min.js" th:src="@{/angular.min.js}"></script>
         <script type="text/javascript" src="../static/app/app.module.js" th:src="@{/app/app.module.js}"></script>
         <script type="text/javascript" src="../static/app/conductores.controller.js" th:src="@{/app/conductores.controller.js}"></script>
     </head>
