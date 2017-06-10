@@ -6,8 +6,11 @@
 package org.foobarspam.mvc;
 
 import static antlr.Utils.error;
-import java.util.ArrayList;
+import java.awt.Dimension;
+import java.awt.Image;
+import maps.java.MapsJava;
 import maps.java.Route;
+import maps.java.StaticMaps;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -40,9 +43,6 @@ public class MapsToolsTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of calcularRuta method, of class MapsTools.
-     */
     @Test
     public void testCalcularRuta() {
         Route ruta = new Route();
@@ -65,6 +65,19 @@ public class MapsToolsTest {
         }
 
         System.out.println("Distancia total: " + distanciaTotal + " metros.");
+
+    }
+
+    @Test
+    public void testObtenerMapaDestino() {
+        StaticMaps ObjStatMap = new StaticMaps();
+        try {
+            Image resultadoMapa = ObjStatMap.getStaticMap("Selva", 15, new Dimension(1000, 1000),
+                    1, StaticMaps.Format.png, StaticMaps.Maptype.roadmap);
+            System.out.println("La URL asociada al mapa es: " + MapsJava.getLastRequestURL());
+        } catch (Exception e) {
+            error("Mapas estáticos");
+        }
 
     }
 
