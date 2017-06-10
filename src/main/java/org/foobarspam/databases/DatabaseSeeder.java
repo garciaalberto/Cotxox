@@ -34,11 +34,11 @@ public class DatabaseSeeder implements CommandLineRunner {
 
         List<Conductor> poolConductores = new ArrayList<>();
 
-        poolConductores.add(new Conductor("Rick Sánchez", "CBV 4005", "Seat Panda", false, 5.4));
-        poolConductores.add(new Conductor("Mortimer Smith", "JGB 4475", "Peugeot 307 HDI", false, 7.8));
-        poolConductores.add(new Conductor("Leia Organa", "FHD 6416", "Toyota Corolla", true, 6.7));
-        poolConductores.add(new Conductor("Hann Solo", "FBK 7645", "Ford Europa", false, 8.9));
-        poolConductores.add(new Conductor("Hernando Alphonse", "JSD 4567", "Honda McLaren", false, 0.5));
+        poolConductores.add(new Conductor("Rick Sánchez", "CBV 4005", "Space crusher", false, 3.7));
+        poolConductores.add(new Conductor("Morty Smith", "JGB 4475", "Morty Smith", false, 4.2));
+        poolConductores.add(new Conductor("Leia Organa", "FHD 6416", "Tantive IV", true, 3.2));
+        poolConductores.add(new Conductor("Hann Solo", "FBK 7645", "Halcón milenario", false, 4.8));
+        poolConductores.add(new Conductor("Hernando Alphonse", "JSD 4567", "Honda McLaren", false, 1.2));
 
         conductorRepository.save(poolConductores);
 

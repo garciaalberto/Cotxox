@@ -14,8 +14,10 @@
             </div>
         </header>
             <div id="requestcar" class="container-fluid">
+                <div ng-repeat="conductor in vm.conductores">
                 Origen: <input type="text" name="origen"></input>
                 Destino: <input type="text" name="destino"></input>
+                </div>
                 <div id="request" class="btn-default">Pide un Cotxox</div>
             </div>
     </body>
