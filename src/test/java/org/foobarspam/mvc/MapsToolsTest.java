@@ -70,14 +70,13 @@ public class MapsToolsTest {
 
     @Test
     public void testObtenerMapaDestino() {
-        StaticMaps ObjStatMap = new StaticMaps();
-        try {
-            Image resultadoMapa = ObjStatMap.getStaticMap("Selva", 15, new Dimension(1000, 1000),
-                    1, StaticMaps.Format.png, StaticMaps.Maptype.roadmap);
-            System.out.println("La URL asociada al mapa es: " + MapsJava.getLastRequestURL());
-        } catch (Exception e) {
-            error("Mapas estáticos");
-        }
+        String origen = "Selva";
+        String destino = "Manacor";
+        MapsTools ruta = new MapsTools();
+        ruta.calcularRuta(origen, destino);
+        System.out.println("#####CALULANDO RUTA... De " + origen + " a " + destino + " ##########");
+        System.out.println("Tiempo: " + ruta.getTiempoTotal() + " segundos\n"
+                + "Distancia: " + ruta.getDistanciaTotal() + " metros\nUrl Imagen: " + ruta.getUrlMapaDesino());
 
     }
 

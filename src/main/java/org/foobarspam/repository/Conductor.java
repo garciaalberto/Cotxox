@@ -22,41 +22,51 @@ public class Conductor {
 
     }
 
-    public Conductor(String nombre, String matricula, String modelo, Boolean ocupado, double valoracionMedia) {
+    public Conductor(String nombre, String matricula, String modelo, Boolean ocupado, ArrayList<Byte> valoraciones){
 
         this.nombre = nombre;
         this.matricula = matricula;
         this.modelo = modelo;
         this.ocupado = ocupado;
-        this.valoracionMedia = valoracionMedia;
+        this.valoraciones = valoraciones;
 
     }
 
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public String getMatricula() {
-        return matricula;
+        return this.matricula;
     }
 
     public String getModelo() {
-        return modelo;
+        return this.modelo;
     }
 
     public ArrayList<Byte> getValoraciones() {
-        return valoraciones;
+        return this.valoraciones;
+    }
+    
+    public ArrayList<Byte> appendValoracion(Byte valoracion) {
+        getValoraciones().add(valoracion);
+        return getValoraciones();
     }
 
     public Boolean getOcupado() {
-        return ocupado;
+        return this.ocupado;
     }
 
     public double getValoracionMedia() {
+        double valoracionMedia = 0;
+        for (Byte valoracion : getValoraciones()){
+            valoracionMedia += valoracion;
+        }
+        valoracionMedia = valoracionMedia/getValoraciones().size();
         return valoracionMedia;
     }
     
