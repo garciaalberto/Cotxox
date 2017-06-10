@@ -30,7 +30,7 @@
         }
 
         function getFiables(){
-            var url = "/bookings/Fiables/" + 5.0;
+            var url = "/bookings/Fiables/" + 3.0;
             var bookingsPromise = $http.get(url);
             bookingsPromise.then(function(response){
                 vm.conductores = response.data;
