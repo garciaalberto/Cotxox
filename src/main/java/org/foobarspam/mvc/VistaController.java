@@ -35,4 +35,10 @@ public class VistaController {
 
         return "index";
     }
+    
+    @RequestMapping("/setpickup")
+    public String setpickup(Model model) {
+        
+        return "setpickup";
+    }
 }
