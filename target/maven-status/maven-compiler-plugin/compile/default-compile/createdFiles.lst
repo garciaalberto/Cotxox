@@ -2,6 +2,7 @@ org\foobarspam\mvc\VistaController.class
 org\foobarspam\repository\CarreraService.class
 org\foobarspam\repository\Conductor.class
 org\foobarspam\mvc\ConductorController.class
+org\foobarspam\mvc\MapsTools.class
 org\foobarspam\CotxoxAppApplication.class
 org\foobarspam\repository\ConductorRepository.class
 org\foobarspam\databases\DatabaseSeeder.class
