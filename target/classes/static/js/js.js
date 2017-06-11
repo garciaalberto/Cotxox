@@ -4,7 +4,7 @@ function requestCar(){
         document.getElementById("requestcar").style.display = "none";
         document.getElementById("acceptPayment").style.display = "block";
     } else {
-        alert("Por favor, introduce un Origen/Destino para la carrera");
+        document.getElementById("alerta").style.display = "block";;
     }
 }
 
