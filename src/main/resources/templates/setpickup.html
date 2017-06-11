@@ -24,6 +24,11 @@
                 <p th:text="'Coste total del trayecto ' + ${costeTotal} + ' €'"></p>
                 <button type="button" id="requestCar" onclick="acceptPayment()">Confirmar y solicitar un conductor</button>
             </div>
+            <div id="ride" style="display:none" class="container-fluid">
+                Conductor: Morty Smith <img src="./img/ConductorMorty.jpg" alt="Conductor"/>
+                Vehículo: Morty Smith <img src="./img/VehiculoMorty.jpg" alt="Vehículo"/>
+                Puntuación: 4 &#9734;
+            </div>
         <script src="http://code.jquery.com/jquery.js"></script>
         <script src="webjars/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     </body>
