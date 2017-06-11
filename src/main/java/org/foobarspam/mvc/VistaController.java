@@ -37,14 +37,28 @@ public class VistaController {
 
         return "index";
     }
-    
+
+    /*
+    @RequestMapping(value = "/setpickup/{destino}", method = RequestMethod.GET)
+    public String setpickup(Model model, @RequestBody String destino) {
+
+        MapsTools ruta = new MapsTools();
+        ruta.calcularRuta("IES Borja Moll", destino);
+        double distancia = ruta.getDistanciaTotal();
+        double tiempo = ruta.getTiempoTotal();
+        String url = ruta.getUrlMapaDesino();
+        model.addAttribute("costeTotal", distancia);
+        return "setpickup";
+    }
+     */
+
     @RequestMapping("/setpickup")
     public String setpickup(Model model) {
         model.addAttribute("costeTotal", randomizeCost());
         return "setpickup";
     }
-    
-    private int randomizeCost(){
+
+    private int randomizeCost() {
         int cost = ThreadLocalRandom.current().nextInt(0, 100);
         return cost;
     }

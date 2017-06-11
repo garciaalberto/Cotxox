@@ -79,5 +79,16 @@ public class MapsToolsTest {
                 + "Distancia: " + ruta.getDistanciaTotal() + " metros\nUrl Imagen: " + ruta.getUrlMapaDesino());
 
     }
+     @Test
+    public void testObtenerMapaDestino2() {
+        String origen = "Ies Borja Moll";
+        String destino = "Manacor";
+        MapsTools ruta = new MapsTools();
+        ruta.calcularRuta(origen, destino);
+        System.out.println("#####CALULANDO RUTA... De " + origen + " a " + destino + " ##########");
+        System.out.println("Tiempo: " + ruta.getTiempoTotal() + " segundos\n"
+                + "Distancia: " + ruta.getDistanciaTotal() + " metros\nUrl Imagen: " + ruta.getUrlMapaDesino());
+
+    }
 
 }
