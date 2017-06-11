@@ -64,6 +64,12 @@ public class VistaController {
         model.addAttribute("costeTotal", this.costeTotal);
         return "payment";
     }
+    
+    @RequestMapping("/rate")
+    public String rate(Model model) {
+        
+        return "rate";
+    }
 
     private int randomizeCost() {
         int cost = ThreadLocalRandom.current().nextInt(0, 100);

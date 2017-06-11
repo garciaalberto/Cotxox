@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Pagar al conductor</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"></link>        
+        <script type="text/javascript" src="../static/angular.min.js" th:src="@{/angular.min.js}"></script>
+        <script type="text/javascript" src="../static/app/app.module.js" th:src="@{/app/app.module.js}"></script>
+        <script type="text/javascript" src="../static/app/conductores.controller.js" th:src="@{/app/conductores.controller.js}"></script>
+        <script src="./js/js.js"></script>
+
+    </head>
+    <body>
+        <div id="payment" class="container-fluid  text-center">
+            <div class="row  text-center">
+                <div class="col-sm-12 col-md-12">
+                  <div style="margin-top: 20px;margin-bottom: 20px;" class="thumbnail text-center">
+                      <img src="./img/ConductorRick.jpg" alt="Conductor"></img>
+                    <div class="caption">
+                        <h2>Rick Sánchez</h2>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="rating">
+                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+            </div>
+        </div>
+    </body>
+</html>
