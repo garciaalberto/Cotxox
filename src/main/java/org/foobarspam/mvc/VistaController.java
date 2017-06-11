@@ -6,6 +6,7 @@
 package org.foobarspam.mvc;
 
 import java.util.Date;
+import java.util.concurrent.ThreadLocalRandom;
 import org.foobarspam.repository.Conductor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -38,7 +39,13 @@ public class VistaController {
     
     @RequestMapping("/setpickup")
     public String setpickup(Model model) {
+        model.addAttribute("costeTotal", randomizeCost());
         
         return "setpickup";
+    }
+    
+    private int randomizeCost(){
+        int cost = ThreadLocalRandom.current().nextInt(0, 100);
+        return cost;
     }
 }

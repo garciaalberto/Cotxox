@@ -20,6 +20,10 @@
                 Destino: <input type="text" name="destino" id="destino"></input>
                 <button type="button" id="requestCar" onclick="requestCar()">Pedir un Cotxox</button>
             </div>
+            <div id="acceptPayment" style="display:none" class="container-fluid">
+                <p th:text="'Coste total del trayecto ' + ${costeTotal} + ' €'"></p>
+                <button type="button" id="requestCar" onclick="acceptPayment()">Confirmar y solicitar un conductor</button>
+            </div>
         <script src="http://code.jquery.com/jquery.js"></script>
         <script src="webjars/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     </body>
