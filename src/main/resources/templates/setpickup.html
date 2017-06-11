@@ -3,21 +3,23 @@
     <head>
         <meta charset="UTF-8" />
         <title>Pedir un conductor</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"></link>        
-        <script type="text/javascript" src="../static/angular.min.js" th:src="@{/angular.min.js}"></script>
-        <script type="text/javascript" src="../static/app/app.module.js" th:src="@{/app/app.module.js}"></script>
-        <script type="text/javascript" src="../static/app/conductores.controller.js" th:src="@{/app/conductores.controller.js}"></script>
+        <link href="webjars/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen"> </link>
+        <script type="text/javascript" src="./angular.min.js" th:src="@{/angular.min.js}"></script>
+        <script type="text/javascript" src="./app/app.module.js" th:src="@{/app/app.module.js}"></script>
+        <script type="text/javascript" src="./app/conductores.controller.js" th:src="@{/app/conductores.controller.js}"></script>
     </head>
-    <body ng-app="app" ng-controller="ConductorsController as vm">
+    <body>
         <header>
             <div id="imagen" class="img-responsive">
-                <img src="../static/img/MockGoogleAPI.jpg" alt="Palma map"/>
+                <img src="./img/MockGoogleAPI.jpg" alt="Palma map"/>
             </div>
         </header>
             <div id="requestcar" class="container-fluid">
                 Origen: <input type="text" name="origen" value="Tu localización"></input>
                 Destino: <input type="text" name="destino"></input>
-                <div id="request" class="btn-default">Pide un Cotxox</div>
+                <button type="button" class="btn btn-success">Pedir un Cotxox</button>
             </div>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="webjars/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     </body>
 </html>
