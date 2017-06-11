@@ -51,36 +51,35 @@ public class VistaController {
         return "setpickup";
     }
      */
-
     @RequestMapping("/setpickup")
     public String setpickup(Model model) {
         model.addAttribute("costeTotal", calculatePrecio(randomizeDistance(), randomizeTime()));
         return "setpickup";
     }
-<<<<<<< HEAD
 
     private int randomizeCost() {
         int cost = ThreadLocalRandom.current().nextInt(0, 100);
         return cost;
-=======
-    
-    private double randomizeDistance(){
+
+    }
+
+    private double randomizeDistance() {
         double distance = ThreadLocalRandom.current().nextInt(0, 30);
         return distance;
     }
-    private double randomizeTime(){
+
+    private double randomizeTime() {
         double time = ThreadLocalRandom.current().nextInt(0, 30);
         return time;
     }
-    
-    private double calculatePrecio(double distancia, double tiempo){
-		tiempo = tiempo * 0.35;
-		distancia = distancia * 1.35;
-		if ((tiempo + distancia) > 5){
-			return tiempo + distancia;
-		} else {
-			return 5;
-	}
->>>>>>> master
+
+    private double calculatePrecio(double distancia, double tiempo) {
+        tiempo = tiempo * 0.35;
+        distancia = distancia * 1.35;
+        if ((tiempo + distancia) > 5) {
+            return tiempo + distancia;
+        } else {
+            return 5;
+        }
     }
 }
