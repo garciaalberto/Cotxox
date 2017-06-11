@@ -44,8 +44,17 @@ public class VistaController {
         return "setpickup";
     }
     
-    private int randomizeCost(){
-        int cost = ThreadLocalRandom.current().nextInt(0, 100);
-        return cost;
+    private int randomizeDistance(){
+        int distance = ThreadLocalRandom.current().nextInt(0, 30);
+        return distance;
+    }
+    private int randomizeTime(){
+        int time = ThreadLocalRandom.current().nextInt(0, 30);
+        return time;
+    }
+    
+    private int calculatePrecio(){
+        Tarifa tarifa = new Tarifa();
+        double precio = 
     }
 }
