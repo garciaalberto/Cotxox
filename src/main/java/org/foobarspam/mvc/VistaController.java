@@ -40,21 +40,26 @@ public class VistaController {
     
     @RequestMapping("/setpickup")
     public String setpickup(Model model) {
-        model.addAttribute("costeTotal", randomizeCost());
+        model.addAttribute("costeTotal", calculatePrecio(randomizeDistance(), randomizeTime()));
         return "setpickup";
     }
     
-    private int randomizeDistance(){
-        int distance = ThreadLocalRandom.current().nextInt(0, 30);
+    private double randomizeDistance(){
+        double distance = ThreadLocalRandom.current().nextInt(0, 30);
         return distance;
     }
-    private int randomizeTime(){
-        int time = ThreadLocalRandom.current().nextInt(0, 30);
+    private double randomizeTime(){
+        double time = ThreadLocalRandom.current().nextInt(0, 30);
         return time;
     }
     
-    private int calculatePrecio(){
-        Tarifa tarifa = new Tarifa();
-        double precio = 
+    private double calculatePrecio(double distancia, double tiempo){
+		tiempo = tiempo * 0.35;
+		distancia = distancia * 1.35;
+		if ((tiempo + distancia) > 5){
+			return tiempo + distancia;
+		} else {
+			return 5;
+	}
     }
 }
