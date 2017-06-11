@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class VistaController {
 
     private String appMode;
+    private double costeTotal;
 
     @Autowired
     public VistaController(Environment environment) {
@@ -53,8 +54,15 @@ public class VistaController {
      */
     @RequestMapping("/setpickup")
     public String setpickup(Model model) {
-        model.addAttribute("costeTotal", calculatePrecio(randomizeDistance(), randomizeTime()));
+        this.costeTotal = calculatePrecio(randomizeDistance(), randomizeTime());
+        model.addAttribute("costeTotal", this.costeTotal);
         return "setpickup";
+    }
+    
+    @RequestMapping("/payment")
+    public String payment(Model model) {
+        model.addAttribute("costeTotal", this.costeTotal);
+        return "payment";
     }
 
     private int randomizeCost() {
