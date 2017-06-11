@@ -3,11 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <title>Pedir un conductor</title>
-        <link href="webjars/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen"> </link>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"></link>        
+        <script type="text/javascript" src="../static/angular.min.js" th:src="@{/angular.min.js}"></script>
+        <script type="text/javascript" src="../static/app/app.module.js" th:src="@{/app/app.module.js}"></script>
+        <script type="text/javascript" src="../static/app/conductores.controller.js" th:src="@{/app/conductores.controller.js}"></script>
+
         <script src="./js/js.js"></script>
-        <script type="text/javascript" src="./angular.min.js" th:src="@{/angular.min.js}"></script>
-        <script type="text/javascript" src="./app/app.module.js" th:src="@{/app/app.module.js}"></script>
-        <script type="text/javascript" src="./app/conductores.controller.js" th:src="@{/app/conductores.controller.js}"></script>
+
+
+
     </head>
     <body>
         <header>
@@ -15,24 +20,22 @@
                 <img src="./img/MockGoogleAPI.jpg" alt="Palma map"/>
             </div>
         </header>
-            <div id="requestcar" class="container-fluid">
-                Origen: <input type="text" name="origen" value="Tu localización" id="origen"></input>
-                Destino: <input type="text" name="destino" id="destino"></input>
-                <button type="button" id="requestCar" onclick="requestCar()">Pedir un Cotxox</button>
-            </div>
-            <div id="acceptPayment" style="display:none" class="container-fluid">
-                <p th:text="'Coste total del trayecto: ' + ${costeTotal} + ' €'"></p>
-                <button type="button" id="requestCar" onclick="acceptPayment()">Confirmar y solicitar un conductor</button>
-            </div>
-            <div id="ride" style="display:none" class="container-fluid">
-                Conductor: Morty Smith 
-                <img src="./img/ConductorMorty.jpg" alt="Conductor"/>
-                Vehículo: Morty Smith 
-                <img src="./img/VehiculoMorty.jpg" alt="Vehículo"/>
-                Puntuación: 4 &#9734;
-                <button type="button" id="ride" onclick="ride()">Llévame!</button>
-            </div>
-        <script src="http://code.jquery.com/jquery.js"></script>
-        <script src="webjars/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <div id="requestcar" class="container-fluid">
+            Origen: <input type="text" name="origen" value="Tu localización" id="origen"></input>
+            Destino: <input type="text" name="destino" id="destino"></input>
+            <button type="button" id="requestCar" onclick="requestCar()">Pedir un Cotxox</button>
+        </div>
+        <div id="acceptPayment" style="display:none" class="container-fluid">
+            <p th:text="'Coste total del trayecto: ' + ${costeTotal} + ' €'"></p>
+            <button type="button" id="requestCar" onclick="acceptPayment()">Confirmar y solicitar un conductor</button>
+        </div>
+        <div id="ride" style="display:none" class="container-fluid">
+            Conductor: Morty Smith 
+            <img src="./img/ConductorMorty.jpg" alt="Conductor"/>
+            Vehículo: Morty Smith 
+            <img src="./img/VehiculoMorty.jpg" alt="Vehículo"/>
+            Puntuación: 4 &#9734;
+            <button type="button" id="ride" onclick="ride()">Llévame!</button>
+        </div>
     </body>
 </html>
