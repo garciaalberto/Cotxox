@@ -21,12 +21,14 @@
                 <button type="button" id="requestCar" onclick="requestCar()">Pedir un Cotxox</button>
             </div>
             <div id="acceptPayment" style="display:none" class="container-fluid">
-                <p th:text="'Coste total del trayecto ' + ${costeTotal} + ' €'"></p>
+                <p th:text="'Coste total del trayecto: ' + ${costeTotal} + ' €'"></p>
                 <button type="button" id="requestCar" onclick="acceptPayment()">Confirmar y solicitar un conductor</button>
             </div>
             <div id="ride" style="display:none" class="container-fluid">
-                Conductor: Morty Smith <img src="./img/ConductorMorty.jpg" alt="Conductor"/>
-                Vehículo: Morty Smith <img src="./img/VehiculoMorty.jpg" alt="Vehículo"/>
+                Conductor: Morty Smith 
+                <img src="./img/ConductorMorty.jpg" alt="Conductor"/>
+                Vehículo: Morty Smith 
+                <img src="./img/VehiculoMorty.jpg" alt="Vehículo"/>
                 Puntuación: 4 &#9734;
                 <button type="button" id="ride" onclick="ride()">Llévame!</button>
             </div>
