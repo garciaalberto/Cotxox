@@ -16,20 +16,23 @@ public class Conductor {
     private ArrayList<Byte> valoraciones = new ArrayList<Byte>();
     private Boolean ocupado = false;
     private double valoracionMedia = 0d;
+    private String imgConductor = null;
+    private String imgVehiculo = null;
 
     // Constructores
     public Conductor() {
 
     }
 
-    public Conductor(String nombre, String matricula, String modelo, Boolean ocupado, ArrayList<Byte> valoraciones){
+    public Conductor(String nombre, String matricula, String modelo, Boolean ocupado, ArrayList<Byte> valoraciones, String imgConductor, String imgVehiculo){
 
         this.nombre = nombre;
         this.matricula = matricula;
         this.modelo = modelo;
         this.ocupado = ocupado;
         this.valoraciones = valoraciones;
-
+        this.imgConductor = imgConductor;
+        this.imgVehiculo = imgVehiculo;
     }
 
     public Long getId() {
