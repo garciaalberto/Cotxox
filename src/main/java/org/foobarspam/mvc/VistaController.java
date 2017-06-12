@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.concurrent.ThreadLocalRandom;
 import org.foobarspam.databases.DatabaseSeeder;
 import org.foobarspam.repository.Conductor;
+import org.foobarspam.repository.ConductorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
@@ -27,7 +28,7 @@ public class VistaController {
     private int numConductor;
 
     @Autowired
-    public VistaController(Environment environment) {
+    public VistaController(Environment environment , ConductorRepository conductorRepository) {
         appMode = environment.getProperty("app-mode");
     }
 
@@ -60,16 +61,16 @@ public class VistaController {
         model.addAttribute("numConductor", this.numConductor);
         return "setpickup";
     }
-    
+
     @RequestMapping("/payment")
     public String payment(Model model) {
         model.addAttribute("costeTotal", this.costeTotal);
         return "payment";
     }
-    
+
     @RequestMapping("/rate")
     public String rate(Model model) {
-        
+
         return "rate";
     }
 
@@ -79,9 +80,9 @@ public class VistaController {
     }
 
     private void randomizeIndex() {
-        
+
     }
-    
+
     private double randomizeDistance() {
         double distance = ThreadLocalRandom.current().nextInt(0, 30);
         return distance;

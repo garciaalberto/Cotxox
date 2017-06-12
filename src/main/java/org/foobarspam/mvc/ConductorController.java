@@ -5,13 +5,11 @@
  */
 package org.foobarspam.mvc;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 import org.foobarspam.repository.Conductor;
 import org.foobarspam.repository.ConductorRepository;
-import org.jsondoc.core.annotation.Api;
-import org.jsondoc.core.annotation.ApiMethod;
-import org.jsondoc.core.annotation.ApiPathParam;
-import org.jsondoc.core.pojo.ApiStage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,10 +23,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/poolConductores")
-@Api(
-        name = "Cotxox API",
-        description = "Lista de metodos para manejar cotxox",
-        stage = ApiStage.RC)
 public class ConductorController {
 
     private ConductorRepository conductorRepository;
@@ -40,15 +34,25 @@ public class ConductorController {
 
     //Todos Conductores
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    @ApiMethod(description = "Obtener todos los conductores")
+
     public List<Conductor> getAll() {
         return this.conductorRepository.findAll();
     }
 
+    @RequestMapping(value = "/setpickup", method = RequestMethod.GET)
+    public Conductor getRandomConductor() {
+        Conductor c = null;
+        ArrayList<Conductor> listaConductores = (ArrayList<Conductor>) this.conductorRepository;
+        do {
+            c = listaConductores.get(ThreadLocalRandom.current().nextInt(0, listaConductores.size()));
+        } while (!c.getOcupado());
+        return c;
+    }
+
     //Conductores con la valoracion indicada
     @RequestMapping(value = "/fiables/{valoracionMedia}", method = RequestMethod.GET)
-    @ApiMethod(description = "Obtener todos los conductores con más de 5 de media")
-    public List<Conductor> getFiables(@ApiPathParam(name = "valoracionMedia") @PathVariable double valoracionMedia) {
+
+    public List<Conductor> getFiables(@PathVariable double valoracionMedia) {
         return this.conductorRepository.findByValoracionMediaLessThan(valoracionMedia);
 
     }
@@ -61,17 +65,16 @@ public class ConductorController {
      */
     //Conductores disponibles o ocupados
     @RequestMapping(value = "/disponibles/{ocupado}", method = RequestMethod.GET)
-    @ApiMethod(description = "Obtener todos los conductores disponibles")
-    public List<Conductor> getDisponibles(@ApiPathParam(name = "ocupado") @PathVariable Boolean ocupado) {
+
+    public List<Conductor> getDisponibles(@PathVariable Boolean ocupado) {
 
         return this.conductorRepository.findByOcupadoTrue(ocupado);
-        
 
     }
 
     //Crear
     @RequestMapping(value = "/crear", method = RequestMethod.POST)
-    @ApiMethod(description = "Crear conductor en la base de datos")
+
     public List<Conductor> crearConductor(@RequestBody Conductor conductor) {
 
         conductorRepository.save(conductor);
@@ -81,7 +84,7 @@ public class ConductorController {
 
     //Eliminar
     @RequestMapping(value = "/eliminar/{id}", method = RequestMethod.POST)
-    @ApiMethod(description = "Eliminar por id a un conductor")
+
     public List<Conductor> eliminarConductor(@RequestBody Long id) {
 
         conductorRepository.delete(id);
