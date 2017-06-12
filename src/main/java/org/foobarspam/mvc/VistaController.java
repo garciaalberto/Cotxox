@@ -24,6 +24,7 @@ public class VistaController {
 
     private String appMode;
     private double costeTotal;
+    private int numConductor;
 
     @Autowired
     public VistaController(Environment environment) {
@@ -56,6 +57,7 @@ public class VistaController {
     public String setpickup(Model model) {
         this.costeTotal = calculatePrecio(randomizeDistance(), randomizeTime());
         model.addAttribute("costeTotal", this.costeTotal);
+        model.addAttribute("numConductor", this.numConductor);
         return "setpickup";
     }
     
@@ -74,9 +76,12 @@ public class VistaController {
     private int randomizeCost() {
         int cost = ThreadLocalRandom.current().nextInt(0, 100);
         return cost;
-
     }
 
+    private void randomizeIndex() {
+        
+    }
+    
     private double randomizeDistance() {
         double distance = ThreadLocalRandom.current().nextInt(0, 30);
         return distance;
