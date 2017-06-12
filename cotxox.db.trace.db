@@ -37408,6 +37408,7 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alb
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:347)
 	... 68 more
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 2017-06-12 19:18:22 database: flush
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
@@ -37527,6 +37528,11 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 >>>>>>> Stashed changes
+=======
+2017-06-12 19:16:31 database: flush
+org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
+>>>>>>> Stashed changes
 	at org.h2.message.DbException.get(DbException.java:168)
 	at org.h2.message.DbException.convert(DbException.java:295)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
@@ -37569,17 +37575,23 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration.getVendorProperties(HibernateJpaAutoConfiguration.java:104)
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:129)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$8af71897.CGLIB$entityManagerFactory$6(<generated>)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$8af71897$$FastClassBySpringCGLIB$$7849af3d.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$8af71897.entityManagerFactory(<generated>)
 =======
+=======
+>>>>>>> Stashed changes
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$24db5441.CGLIB$entityManagerFactory$4(<generated>)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$24db5441$$FastClassBySpringCGLIB$$bb803ada.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$24db5441.entityManagerFactory(<generated>)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -37611,6 +37623,7 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -37624,6 +37637,8 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alb
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 =======
+=======
+>>>>>>> Stashed changes
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -37644,6 +37659,9 @@ Caused by: java.nio.channels.OverlappingFileLockException
 2017-06-12 19:16:32 database: flush
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at org.h2.message.DbException.get(DbException.java:168)
 	at org.h2.message.DbException.convert(DbException.java:295)
@@ -37718,6 +37736,7 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
@@ -37843,6 +37862,8 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alb
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 =======
+=======
+>>>>>>> Stashed changes
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -37863,6 +37884,9 @@ Caused by: java.nio.channels.OverlappingFileLockException
 2017-06-12 19:17:24 database: flush
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at org.h2.message.DbException.get(DbException.java:168)
 	at org.h2.message.DbException.convert(DbException.java:295)
@@ -37906,17 +37930,23 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration.getVendorProperties(HibernateJpaAutoConfiguration.java:104)
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:129)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$deb9ff7.CGLIB$entityManagerFactory$7(<generated>)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$deb9ff7$$FastClassBySpringCGLIB$$22104121.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$deb9ff7.entityManagerFactory(<generated>)
 =======
+=======
+>>>>>>> Stashed changes
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$7a76732.CGLIB$entityManagerFactory$5(<generated>)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$7a76732$$FastClassBySpringCGLIB$$cc646dcf.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$7a76732.entityManagerFactory(<generated>)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -37948,6 +37978,7 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -37961,6 +37992,8 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alb
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 =======
+=======
+>>>>>>> Stashed changes
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -37981,6 +38014,9 @@ Caused by: java.nio.channels.OverlappingFileLockException
 2017-06-12 19:17:24 database: flush
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at org.h2.message.DbException.get(DbException.java:168)
 	at org.h2.message.DbException.convert(DbException.java:295)
@@ -38055,6 +38091,7 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
@@ -38180,6 +38217,8 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alb
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 =======
+=======
+>>>>>>> Stashed changes
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -38200,6 +38239,9 @@ Caused by: java.nio.channels.OverlappingFileLockException
 2017-06-12 19:32:43 database: flush
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at org.h2.message.DbException.get(DbException.java:168)
 	at org.h2.message.DbException.convert(DbException.java:295)
@@ -38243,17 +38285,23 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration.getVendorProperties(HibernateJpaAutoConfiguration.java:104)
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:129)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b2ee7efd.CGLIB$entityManagerFactory$6(<generated>)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b2ee7efd$$FastClassBySpringCGLIB$$cdccf43a.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b2ee7efd.entityManagerFactory(<generated>)
 =======
+=======
+>>>>>>> Stashed changes
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$8d212391.CGLIB$entityManagerFactory$6(<generated>)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$8d212391$$FastClassBySpringCGLIB$$bdec3542.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$8d212391.entityManagerFactory(<generated>)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -38285,6 +38333,7 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -38298,6 +38347,8 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alb
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 =======
+=======
+>>>>>>> Stashed changes
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -38318,6 +38369,9 @@ Caused by: java.nio.channels.OverlappingFileLockException
 2017-06-12 19:32:43 database: flush
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at org.h2.message.DbException.get(DbException.java:168)
 	at org.h2.message.DbException.convert(DbException.java:295)
@@ -38392,6 +38446,7 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
@@ -38517,6 +38572,8 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alb
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 =======
+=======
+>>>>>>> Stashed changes
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -38537,6 +38594,9 @@ Caused by: java.nio.channels.OverlappingFileLockException
 2017-06-12 19:34:48 database: flush
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at org.h2.message.DbException.get(DbException.java:168)
 	at org.h2.message.DbException.convert(DbException.java:295)
@@ -38580,17 +38640,23 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration.getVendorProperties(HibernateJpaAutoConfiguration.java:104)
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:129)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$7d38d086.CGLIB$entityManagerFactory$5(<generated>)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$7d38d086$$FastClassBySpringCGLIB$$583934ba.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$7d38d086.entityManagerFactory(<generated>)
 =======
+=======
+>>>>>>> Stashed changes
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$6b0c8abe.CGLIB$entityManagerFactory$5(<generated>)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$6b0c8abe$$FastClassBySpringCGLIB$$83b7b709.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$6b0c8abe.entityManagerFactory(<generated>)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -38622,6 +38688,7 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -38635,6 +38702,8 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alb
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 =======
+=======
+>>>>>>> Stashed changes
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -38655,6 +38724,9 @@ Caused by: java.nio.channels.OverlappingFileLockException
 2017-06-12 19:34:48 database: flush
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at org.h2.message.DbException.get(DbException.java:168)
 	at org.h2.message.DbException.convert(DbException.java:295)
@@ -38730,6 +38802,7 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -38743,6 +38816,8 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alb
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 =======
+=======
+>>>>>>> Stashed changes
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -38763,6 +38838,9 @@ Caused by: java.nio.channels.OverlappingFileLockException
 2017-06-12 19:42:24 database: flush
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at org.h2.message.DbException.get(DbException.java:168)
 	at org.h2.message.DbException.convert(DbException.java:295)
@@ -38802,17 +38880,23 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:139)
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:105)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b2ee7efd.CGLIB$jpaVendorAdapter$4(<generated>)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b2ee7efd$$FastClassBySpringCGLIB$$cdccf43a.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b2ee7efd.jpaVendorAdapter(<generated>)
 =======
+=======
+>>>>>>> Stashed changes
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b5205aa3.CGLIB$jpaVendorAdapter$5(<generated>)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b5205aa3$$FastClassBySpringCGLIB$$128ca80d.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b5205aa3.jpaVendorAdapter(<generated>)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -38872,26 +38956,38 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 99 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]
 =======
+=======
+>>>>>>> Stashed changes
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 99 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:765)
 	at org.h2.mvstore.FileStore.open(FileStore.java:173)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:347)
 	... 94 more
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 2017-06-12 19:34:57 database: flush
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
+=======
+2017-06-12 19:42:24 database: flush
+org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
+>>>>>>> Stashed changes
 =======
 2017-06-12 19:42:24 database: flush
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
@@ -38939,17 +39035,23 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration.getVendorProperties(HibernateJpaAutoConfiguration.java:104)
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:129)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b2ee7efd.CGLIB$entityManagerFactory$6(<generated>)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b2ee7efd$$FastClassBySpringCGLIB$$cdccf43a.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b2ee7efd.entityManagerFactory(<generated>)
 =======
+=======
+>>>>>>> Stashed changes
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b5205aa3.CGLIB$entityManagerFactory$3(<generated>)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b5205aa3$$FastClassBySpringCGLIB$$128ca80d.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$b5205aa3.entityManagerFactory(<generated>)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -38981,26 +39083,38 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 75 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]
 =======
+=======
+>>>>>>> Stashed changes
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 75 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:765)
 	at org.h2.mvstore.FileStore.open(FileStore.java:173)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:347)
 	... 70 more
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 2017-06-12 19:34:57 database: flush
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
+=======
+2017-06-12 19:42:25 database: flush
+org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
+>>>>>>> Stashed changes
 =======
 2017-06-12 19:42:25 database: flush
 org.h2.message.DbException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
@@ -39080,17 +39194,23 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 73 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Alberto10/Desktop/FINAL COTXOX/Cotxox/cotxox.db.mv.db [1.4.194/7]
 =======
+=======
+>>>>>>> Stashed changes
 Caused by: org.h2.jdbc.JdbcSQLException: Error General : "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]" [50000-194]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 73 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Sergi/Desktop/Cotxox/cotxox.db.mv.db [1.4.194/7]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:765)
 	at org.h2.mvstore.FileStore.open(FileStore.java:173)
