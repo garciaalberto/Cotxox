@@ -31,9 +31,9 @@ public class Conductor {
         this.modelo = modelo;
         this.ocupado = ocupado;
         this.valoraciones = valoraciones;
+        this.valoracionMedia = getValoracionMedia();
         this.imgConductor = imgConductor;
         this.imgVehiculo = imgVehiculo;
-        this.valoracionMedia = getValoracionMedia();
     }
 
     public Long getId() {
@@ -73,5 +73,14 @@ public class Conductor {
         valoracionMedia = valoracionMedia / getValoraciones().size();
         return valoracionMedia;
     }
+
+    public String getImgConductor() {
+        return imgConductor;
+    }
+
+    public String getImgVehiculo() {
+        return imgVehiculo;
+    }
+    
 
 }
