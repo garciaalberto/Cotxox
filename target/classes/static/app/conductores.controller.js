@@ -13,7 +13,8 @@
 
         vm.conductores = [];
         vm.getAll = getAll;
-        //vm.getFiables = getFiables;
+        vm.getFiables = getFiables;
+        vm.getDisponibles = getDisponibles;
         vm.getRandom = getRandom;
 
         init();
@@ -30,13 +31,21 @@
             });
         }
 
-//        function getFiables() {
-//            var url = "/poolConductores/Fiables/" + 3.0;
-//            var conductorPromise = $http.get(url);
-//            conductorPromise.then(function (response) {
-//                vm.conductores = response.data;
-//            });
-//        }
+        function getFiables() {
+            var url = "/poolConductores/fiables/2.5";
+            var conductorPromise = $http.get(url);
+            conductorPromise.then(function (response) {
+                vm.conductores = response.data;
+            });
+        }
+
+        function getDisponibles() {
+            var url = "/poolConductores/disponibles/1";
+            var conductorPromise = $http.get(url);
+            conductorPromise.then(function (response) {
+                vm.conductores = response.data;
+            });
+        }
 
         function getRandom() {
             var url = "/poolConductores/random";

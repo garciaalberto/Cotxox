@@ -42,7 +42,7 @@ public class ConductorController {
     //Conductores con la valoracion indicada
     @RequestMapping(value = "/fiables/{valoracionMedia}", method = RequestMethod.GET)
     public List<Conductor> getFiables(@PathVariable double valoracionMedia) {
-        return conductorRepository.findByValoracionMediaLessThan(valoracionMedia);
+        return conductorRepository.findByValoracionMediaGreaterThan(valoracionMedia);
     }
 
     @RequestMapping(value = "/disponibles/{ocupado}", method = RequestMethod.GET)
