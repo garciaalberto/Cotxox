@@ -36,6 +36,7 @@
                                 <th>Vehículo</th>
                                 <th>Matrícula</th>
                                 <th>Valoración</th>
+                                <th>Ocupado</th>
                                 <th style="width: 90px"></th>
                             </tr>
                         </thead>
@@ -45,6 +46,7 @@
                                 <td>{{conductor.modelo}}</td>
                                 <td>{{conductor.matricula}}</td>
                                 <td>{{conductor.valoracionMedia}}</td>
+                                <td>{{conductor.ocupado}}</td>
                                 <td>
                                     <button class="btn btn-danger" ng-click="vm.eliminarConductor(conductor.id)">Eliminar conductor</button>
                                 </td>
