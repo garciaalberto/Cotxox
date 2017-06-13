@@ -25,7 +25,7 @@ public class VistaController {
 
     private String appMode;
     private double costeTotal;
-    private int numConductor;
+    private String destino;
 
     @Autowired
     public VistaController(Environment environment , ConductorRepository conductorRepository) {
@@ -90,6 +90,10 @@ public class VistaController {
     private double randomizeTime() {
         double time = ThreadLocalRandom.current().nextInt(0, 30);
         return time;
+    }
+    
+    private String getDestino(){
+        return "a";
     }
 
     private double calculatePrecio(double distancia, double tiempo) {
