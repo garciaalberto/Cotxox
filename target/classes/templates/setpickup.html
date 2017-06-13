@@ -11,7 +11,7 @@
         <script src="./js/js.js"></script>
 
     </head>
-    <body ng-app="app" ng-controller="ConductorsController as vm">
+    <body ng-app="app" ng-controller="ConductorsController as vm" style="background-color: #E0F8F7;">
         <header>
             <div id="imagen" class="img-responsive text-center">
                 <img style="margin-top: 20px;margin-bottom: 20px;" src="./img/MapsIESBorjaMollMaps.jpg" alt="Palma map"/>
@@ -48,9 +48,11 @@
                 <div class="col-sm-6 col-md-6">
                   <div style="margin-top: 20px;margin-bottom: 20px;" class="thumbnail text-center">
                       <h2>Conductor:</h2>
-                      <img src="./img/ConductorRick.jpg" alt="Conductor"></img>
-                    <div ng-repeat="conductor in vm.conductores" class="caption">
-                        <h2>{{conductor.nombre}}</h2>
+                      <div ng-repeat="conductor in vm.conductores">
+                      <img ng-if="$index == 1" src="./img/ConductorRick.jpg" alt="Conductor"></img>
+                      </div>
+                      <div ng-repeat="conductor in vm.conductores" class="caption">
+                        <h2 ng-if="$index == 1">{{conductor.nombre}}</h2>
                     </div>
                   </div>
                 </div>
