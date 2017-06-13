@@ -57,16 +57,16 @@
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-6">
-                  <div style="margin-top: 20px;margin-bottom: 20px;" class="thumbnail text-center">
+                  <div ng-repeat="conductor in vm.conductores" style="margin-top: 20px;margin-bottom: 20px;" class="thumbnail text-center">
                       <h2>Vehículo:</h2>
-                      <img src="./img/VehiculoRick.jpg" alt="Vehiculo"></img>
+                      <img src="{{conductor.imgVehiculo}}" alt="Vehiculo"></img>
                     <div class="caption">
-                        <h2>Space crusher</h2>
+                        <h2>{{conductor.modelo}}</h2>
                     </div>
                   </div>
                 </div>
-            </div>
-            <h2 style="margin-top: 20px;margin-bottom: 20px;" class="text-center">Puntuación media: 3.4 &#9734;</h2>
+            </div >
+            <h2 ng-repeat="conductor in vm.conductores" style="margin-top: 20px;margin-bottom: 20px;" class="text-center">{{conductor.valoracionMedia}} &#9734;</h2>
             <a href="payment"><button style="margin-top: 20px;margin-bottom: 20px;" class="btn-primary btn-lg" type="button" id="btnride" onclick="ride()">Llévame!</button></a>
         </div>
     </body>
