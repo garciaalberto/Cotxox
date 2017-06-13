@@ -14,7 +14,7 @@
         vm.conductores = [];
         vm.getAll = getAll;
         //vm.getFiables = getFiables;
-        vm.getRandomConductor = getRandomConductor;
+        vm.getRandom = getRandom;
 
         init();
 
@@ -38,8 +38,8 @@
 //            });
 //        }
 
-        function getRandomConductor() {
-            var url = "/setpickup";
+        function getRandom() {
+            var url = "/poolConductores/random";
             var conductorPromise = $http.get(url);
             conductorPromise.then(function (response) {
                 vm.conductores = response.data;

@@ -39,30 +39,12 @@ public class ConductorController {
         return this.conductorRepository.findAll();
     }
 
-    @RequestMapping(value = "/setpickup", method = RequestMethod.GET)
-    public Conductor getRandomConductor() {
-        Conductor c = null;
-        ArrayList<Conductor> listaConductores = (ArrayList<Conductor>) this.conductorRepository;
-        do {
-            c = listaConductores.get(ThreadLocalRandom.current().nextInt(0, listaConductores.size()));
-        } while (!c.getOcupado());
-        return c;
-    }
-
     //Conductores con la valoracion indicada
     @RequestMapping(value = "/fiables/{valoracionMedia}", method = RequestMethod.GET)
-    public List<Conductor> getAffordable(@PathVariable double valoracionMedia) {
+    public List<Conductor> getFiables(@PathVariable double valoracionMedia) {
         return conductorRepository.findByValoracionMediaLessThan(valoracionMedia);
     }
 
-
-    /*
-    @RequestMapping(value = "/disponibles/{ocupado}", method = RequestMethod.GET) 
-    public List<Conductor> getDisponibles(@PathVariable boolean ocupado) { 
-        return this.poolConductores.stream().filter(x -> x.isOcupado() == ocupado).collect(Collectors.toList()); 
-    } 
-     */
-    //Conductores disponibles o ocupados
     @RequestMapping(value = "/disponibles/{ocupado}", method = RequestMethod.GET)
     public List<Conductor> getDisponibles(@PathVariable int ocupado) {
         switch (ocupado) {
@@ -74,6 +56,14 @@ public class ConductorController {
                 return null;
         }
 
+    }
+
+    @RequestMapping(value = "/random", method = RequestMethod.GET)
+    public List<Conductor> getRandom() {
+        List<Conductor> conductores = conductorRepository.findByOcupadoFalse();
+        List<Conductor> randomConductor = new ArrayList<Conductor>();
+        randomConductor.add(conductores.get(ThreadLocalRandom.current().nextInt(0, conductores.size())));
+        return randomConductor;
     }
 
     //Crear
