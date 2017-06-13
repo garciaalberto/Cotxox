@@ -51,11 +51,10 @@ public class ConductorController {
 
     //Conductores con la valoracion indicada
     @RequestMapping(value = "/fiables/{valoracionMedia}", method = RequestMethod.GET)
-
-    public List<Conductor> getFiables(@PathVariable double valoracionMedia) {
-        return this.conductorRepository.findByValoracionMediaLessThan(valoracionMedia);
-
+    public List<Conductor> getAffordable(@PathVariable double valoracionMedia) {
+        return conductorRepository.findByValoracionMediaLessThan(valoracionMedia);
     }
+
 
     /*
     @RequestMapping(value = "/disponibles/{ocupado}", method = RequestMethod.GET) 
@@ -65,10 +64,15 @@ public class ConductorController {
      */
     //Conductores disponibles o ocupados
     @RequestMapping(value = "/disponibles/{ocupado}", method = RequestMethod.GET)
-
-    public List<Conductor> getDisponibles(@PathVariable Boolean ocupado) {
-
-        return this.conductorRepository.findByOcupadoTrue(ocupado);
+    public List<Conductor> getDisponibles(@PathVariable int ocupado) {
+        switch (ocupado) {
+            case 0:
+                return conductorRepository.findByOcupadoTrue();
+            case 1:
+                return conductorRepository.findByOcupadoFalse();
+            default:
+                return null;
+        }
 
     }
 

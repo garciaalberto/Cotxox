@@ -24,7 +24,7 @@ public class Conductor {
 
     }
 
-    public Conductor(String nombre, String matricula, String modelo, Boolean ocupado, ArrayList<Byte> valoraciones, String imgConductor, String imgVehiculo){
+    public Conductor(String nombre, String matricula, String modelo, Boolean ocupado, ArrayList<Byte> valoraciones, String imgConductor, String imgVehiculo) {
 
         this.nombre = nombre;
         this.matricula = matricula;
@@ -33,6 +33,7 @@ public class Conductor {
         this.valoraciones = valoraciones;
         this.imgConductor = imgConductor;
         this.imgVehiculo = imgVehiculo;
+        this.valoracionMedia = getValoracionMedia();
     }
 
     public Long getId() {
@@ -54,7 +55,7 @@ public class Conductor {
     public ArrayList<Byte> getValoraciones() {
         return this.valoraciones;
     }
-    
+
     public ArrayList<Byte> appendValoracion(Byte valoracion) {
         getValoraciones().add(valoracion);
         return getValoraciones();
@@ -66,13 +67,11 @@ public class Conductor {
 
     public double getValoracionMedia() {
         double valoracionMedia = 0;
-        for (Byte valoracion : getValoraciones()){
+        for (Byte valoracion : getValoraciones()) {
             valoracionMedia += valoracion;
         }
-        valoracionMedia = valoracionMedia/getValoraciones().size();
+        valoracionMedia = valoracionMedia / getValoraciones().size();
         return valoracionMedia;
     }
-    
-    
 
 }
