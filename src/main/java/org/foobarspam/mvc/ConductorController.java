@@ -42,7 +42,7 @@ public class ConductorController {
     //Conductores con la valoracion indicada
     @RequestMapping(value = "/fiables/{valoracionMedia}", method = RequestMethod.GET)
     public List<Conductor> getFiables(@PathVariable double valoracionMedia) {
-        return conductorRepository.findByValoracionMediaLessThan(valoracionMedia);
+        return conductorRepository.findByValoracionMediaGreaterThan(valoracionMedia);
     }
 
     @RequestMapping(value = "/disponibles/{ocupado}", method = RequestMethod.GET)
@@ -77,13 +77,11 @@ public class ConductorController {
     }
 
     //Eliminar
-    @RequestMapping(value = "/eliminar/{id}", method = RequestMethod.POST)
-
-    public List<Conductor> eliminarConductor(@RequestBody Long id) {
-
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
+    public List<Conductor> remove(@PathVariable long id) {
         conductorRepository.delete(id);
-        return this.conductorRepository.findAll();
 
+        return conductorRepository.findAll();
     }
 
 }
