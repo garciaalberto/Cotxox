@@ -10,7 +10,7 @@
         <script type="text/javascript" src="../static/app/app.module.js" th:src="@{/app/app.module.js}"></script>
         <script type="text/javascript" src="../static/app/conductores.controller.js" th:src="@{/app/conductores.controller.js}"></script>
         <script src="./js/js.js"></script>
-
+        <link rel="stylesheet" type="text/css" href="./css/css.css"></link>
     </head>
     <body style="background-color: #E0F8F7;">
         <div id="payment" class="container-fluid  text-center">
@@ -24,9 +24,20 @@
                   </div>
                 </div>
             </div>
-            <h2 style="margin-top: 20px;margin-bottom: 20px;">Vota al conductor</h2>
+            <h2 style="margin-top: 20px;margin-bottom: 20px;">Vota al conductor:</h2>
             <div class="rating">
-                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                <span class="starRating">
+                    <input id="rating5" type="radio" name="rating" value="5"></input>
+                    <label for="rating5">5</label>
+                    <input id="rating4" type="radio" name="rating" value="4"></input>
+                    <label for="rating4">4</label>
+                    <input id="rating3" type="radio" name="rating" value="3"></input>
+                    <label for="rating3">3</label>
+                    <input id="rating2" type="radio" name="rating" value="2"></input>
+                    <label for="rating2">2</label>
+                    <input id="rating1" type="radio" name="rating" value="1"></input>
+                    <label for="rating1">1</label>
+                  </span>
             </div>
             <div>
             <a href="/"><button style="margin-top: 20px;margin-bottom: 20px;" class="btn-primary btn-lg" type="button" id="btnride" onclick="vote()">Votar</button></a>
