@@ -10,11 +10,6 @@ p{
   padding : 0;
 }
 
-a{
-  color           : #9c3;
-  text-decoration : none;
-}
-
 .starRating:not(old){
   display        : inline-block;
   width          : 7.5em;
