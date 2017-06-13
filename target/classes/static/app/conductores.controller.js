@@ -16,6 +16,8 @@
         vm.getFiables = getFiables;
         vm.getDisponibles = getDisponibles;
         vm.getRandom = getRandom;
+        vm.eliminarConductor = eliminarConductor;
+        vm.crearConductor = crearConductor;
 
         init();
 
@@ -54,11 +56,17 @@
                 vm.conductores = response.data;
             });
         }
-//        function deleteConductor(id) {
-//            var url = "/poolConductores/delete/" + id;
-//            $http.post(url).then(function (response) {
-//                vm.conductores = response.data;
-//            });
-//        }
+        function eliminarConductor(id) {
+            var url = "/poolConductores/delete/" + id;
+            $http.post(url).then(function (response) {
+                vm.conductores = response.data;
+            });
+        }
+        function crearConductor(id) {
+            var url = "/poolConductores/delete/" + id;
+            $http.post(url).then(function (response) {
+                vm.conductores = response.data;
+            });
+        }
     }
 })();
