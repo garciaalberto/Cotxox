@@ -54,12 +54,11 @@ public class VistaController {
         return "setpickup";
     }
      */
-    @RequestMapping("/setpickup")
+    @RequestMapping("/app")
     public String setpickup(Model model) {
         this.costeTotal = calculatePrecio(randomizeDistance(), randomizeTime());
         model.addAttribute("costeTotal", this.costeTotal);
-        model.addAttribute("numConductor", this.numConductor);
-        return "setpickup";
+        return "app";
     }
 
     @RequestMapping("/payment")
