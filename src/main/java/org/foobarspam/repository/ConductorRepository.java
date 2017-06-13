@@ -17,6 +17,7 @@ import org.springframework.stereotype.Repository;
 public interface ConductorRepository extends JpaRepository<Conductor, Long>  {
     
     List<Conductor> findByValoracionMediaLessThan(double valoracionMedia);
-    List<Conductor> findByOcupadoTrue(Boolean ocupado);
+    List<Conductor> findByOcupadoTrue();
+    List<Conductor> findByOcupadoFalse();
     
 }
