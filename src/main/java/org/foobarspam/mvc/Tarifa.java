@@ -53,11 +53,16 @@ public class Tarifa{
         tiempo = tiempo * getCosteTiempo();
         distancia = distancia * getCosteMilla();
         if ((tiempo + distancia) > getMinimo()) {
-            return tiempo + distancia;
+            return Redondear(tiempo + distancia);
         } else {
             return getMinimo();
         }
     }
+        
+        public double Redondear(double numero)
+        {
+              return Math.rint(numero*100)/100;
+        }
 	
 	public double randomizeDistance() {
         double distance = ThreadLocalRandom.current().nextInt(0, 30);
