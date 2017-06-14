@@ -5,10 +5,6 @@
  */
 package org.foobarspam.repository;
 
-/**
- *
- * @author Sergi
- */
 public class CarreraService {
     
 }
