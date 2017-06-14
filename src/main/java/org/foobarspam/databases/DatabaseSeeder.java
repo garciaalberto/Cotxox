@@ -35,13 +35,16 @@ public class DatabaseSeeder implements CommandLineRunner {
         valoracionesHan.add((byte)5); valoracionesHan.add((byte)5); valoracionesHan.add((byte)4); valoracionesHan.add((byte)5); valoracionesHan.add((byte)5);
         ArrayList<Byte> valoracionesAlphonse = new ArrayList<>();
         valoracionesAlphonse.add((byte)1); valoracionesAlphonse.add((byte)2); valoracionesAlphonse.add((byte)1); valoracionesAlphonse.add((byte)1); valoracionesAlphonse.add((byte)1);
+        ArrayList<Byte> valoracionesBatman = new ArrayList<>();
+        valoracionesBatman.add((byte)3); valoracionesBatman.add((byte)2); valoracionesBatman.add((byte)5); valoracionesBatman.add((byte)3); valoracionesBatman.add((byte)4);
         
         poolConductores.add(new Conductor("Rick Sánchez", "CBV 4005", "Space cruiser", false, valoracionesRick, "./img/ConductorRick.jpg", "./img/VehiculoRick.jpg"));
         poolConductores.add(new Conductor("Morty Smith", "JGB 4475", "Morty Smith", false, valoracionesMorty, "./img/ConductorMorty.jpg", "./img/VehiculoMorty.jpg"));
         poolConductores.add(new Conductor("Leia Organa", "FHD 6416", "Tantive IV", true, valoracionesLeia, "./img/ConductorLeia.jpg", "./img/VehiculoLeia.jpg"));
         poolConductores.add(new Conductor("Han Solo", "FBK 7645", "Halcón milenario", false, valoracionesHan, "./img/ConductorHan.jpg", "./img/VehiculoHan.jpg"));
         poolConductores.add(new Conductor("Hernando Alphonse", "JSD 4567", "Honda McLaren", false, valoracionesAlphonse, "./img/ConductorAlphonse.jpg", "./img/VehiculoAlphonse.jpg"));
-
+        poolConductores.add(new Conductor("Batman", "BAT 0202", "Batcotxox", false, valoracionesBatman, "./img/ConductorBatman.jpg", "./img/VehiculoBatman.jpg"));
+        
         conductorRepository.save(poolConductores);
 
     }

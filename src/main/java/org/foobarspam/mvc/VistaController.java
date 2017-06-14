@@ -26,8 +26,6 @@ public class VistaController {
 
     @RequestMapping("/")
     public String index(Model model) {
-        model.addAttribute("datetime", new Date());
-        model.addAttribute("username", "Admin");
         model.addAttribute("mode", appMode);
 
         return "index";
