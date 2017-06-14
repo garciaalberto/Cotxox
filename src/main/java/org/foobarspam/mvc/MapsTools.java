@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package org.foobarspam.mvc;
 
 import static antlr.Utils.error;
@@ -10,10 +6,6 @@ import java.awt.Dimension;
 import java.awt.Image;
 import maps.java.*;
 
-/**
- *
- * @author Sergi
- */
 public class MapsTools extends Route {
 
     private double distanciaTotal;

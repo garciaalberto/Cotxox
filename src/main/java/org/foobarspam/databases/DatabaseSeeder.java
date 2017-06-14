@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package org.foobarspam.databases;
 
 import org.foobarspam.repository.Conductor;
@@ -13,10 +9,6 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Sergi
- */
 
 
 @Component
