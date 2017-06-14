@@ -56,53 +56,9 @@ public class VistaController {
      */
     @RequestMapping("/app")
     public String setpickup(Model model) {
-        this.costeTotal = calculatePrecio(randomizeDistance(), randomizeTime());
+    	Tarifa tarifa = new Tarifa();
+        this.costeTotal = tarifa.calculatePrecio(tarifa.randomizeDistance(), tarifa.randomizeTime());
         model.addAttribute("costeTotal", this.costeTotal);
         return "app";
-    }
-
-    @RequestMapping("/payment")
-    public String payment(Model model) {
-        model.addAttribute("costeTotal", this.costeTotal);
-        return "payment";
-    }
-
-    @RequestMapping("/rate")
-    public String rate(Model model) {
-
-        return "rate";
-    }
-
-    private int randomizeCost() {
-        int cost = ThreadLocalRandom.current().nextInt(0, 100);
-        return cost;
-    }
-
-    private void randomizeIndex() {
-
-    }
-
-    private double randomizeDistance() {
-        double distance = ThreadLocalRandom.current().nextInt(0, 30);
-        return distance;
-    }
-
-    private double randomizeTime() {
-        double time = ThreadLocalRandom.current().nextInt(0, 30);
-        return time;
-    }
-    
-    private String getDestino(){
-        return "a";
-    }
-
-    private double calculatePrecio(double distancia, double tiempo) {
-        tiempo = tiempo * 0.35;
-        distancia = distancia * 1.35;
-        if ((tiempo + distancia) > 5) {
-            return tiempo + distancia;
-        } else {
-            return 5;
-        }
     }
 }

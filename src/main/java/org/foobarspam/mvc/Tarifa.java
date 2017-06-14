@@ -1,52 +1,72 @@
 package org.foobarspam.mvc;
-/*
-import org.foobarspam.repository.Carrera;
 
-public class Tarifa {
-	// Propiedades privadas
-	private double costeMilla = 1.35;
-	private double costeMinuto = 0.35;
-	private double costeMinimo = 5.00;
-	private double porcentajeComision = 20.00;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class Tarifa{
 	
-	// Constructores
-	public Tarifa(){
+	private double tiempo = 0d;
+	private double distancia = 0d;
+	private final double minimo = 5.0;
+	private final double costeTiempo = 0.35;
+	private final double costeMilla = 1.35;
+	
+	Tarifa(){
 		
 	}
+	
+	Tarifa(double distancia, double tiempo){
+		this.tiempo = tiempo;
+		this.distancia = distancia;
+	}
+	
+	
+	
+	public double getTiempo() {
+		return this.tiempo;
+	}
 
-	// Setters y getters
+	public void setTiempo(double tiempo) {
+		this.tiempo = tiempo;
+	}
+
+	public double getDistancia() {
+		return this.distancia;
+	}
+
+	public void setDistancia(double distancia) {
+		this.distancia = distancia;
+	}
+
+	public double getMinimo() {
+		return this.minimo;
+	}
+
+	public double getCosteTiempo() {
+		return this.costeTiempo;
+	}
+
 	public double getCosteMilla() {
 		return this.costeMilla;
 	}
 
-	public double getCosteMinuto() {
-		return this.costeMinuto;
-	}
+	public double calculatePrecio(double distancia, double tiempo) {
+        tiempo = tiempo * getCosteTiempo();
+        distancia = distancia * getCosteMilla();
+        if ((tiempo + distancia) > getMinimo()) {
+            return tiempo + distancia;
+        } else {
+            return getMinimo();
+        }
+    }
+	
+	public double randomizeDistance() {
+        double distance = ThreadLocalRandom.current().nextInt(0, 30);
+        return distance;
+    }
 
-	public double getCosteMinimo() {
-		return this.costeMinimo;
-	}
-
-	public double getPorcentajeComision() {
-		return this.porcentajeComision;
-	}
+    public double randomizeTime() {
+        double time = ThreadLocalRandom.current().nextInt(0, 30);
+        return time;
+    }
 	
-	// Métodos
-	public double getCosteDistancia(double distancia){
-		return getCosteMilla() * distancia;
-	}
-	
-	public double getCosteTiempo(int minutos){
-		return getCosteMinuto() * minutos;
-	}
-	
-	public double getCosteTotalEsperado(Carrera carrera){
-		double costeTiempo = getCosteTiempo(carrera.getTiempoEsperado());
-		double costeDistancia = getCosteDistancia(carrera.getDistancia());
-		if ((costeTiempo + costeDistancia) > getCosteMinimo()){
-			return costeTiempo + costeDistancia;
-		} else {
-			return getCosteMinimo();
-		}
-	}
-}*/
+}
